@@ -1,22 +1,17 @@
-/*
-所有权原则：
-1.Rust 中每一个值都被一个变量所拥有，该变量被称为值的所有者
-2.一个值同时只能被一个变量所拥有，或者说一个值只能拥有一个所有者
-3.当所有者(变量)离开作用域范围时，这个值将被丢弃(drop)
- */
+mod my_str; 
+mod my_cat;// 挂载在根crate
+mod my_ownership;
+use my_cat::cat::*; // 使用crate的相对路径
+use crate::my_str::my_str::new_str; // 使用crate的绝对路径
+mod my_mount_bc;
+mod my_mount;
+use crate::my_mount_bc::mount_bc;
 fn main() {
-    println!("Hello, world!");
-    let mut s= String::from("hello");
-    let r1 = &s; // 
-    let r2 = &s;
-    println!("{} and {}",r1,r2);
-    //新的编译器中， r1 和r2的作用域在此处结束
-    let r3 = &mut s; // 因为r1,r2的作用域在上面的println中结束，
-    println!("r3 {}",r3);        // 所以可以在同一个花括号中声明 可变引用和不可变引用
-    let a =1;
-    println!("{}",a);
-
-    // 变量s在此结束，变量的作用域和引用的作用域是不同的，
-    // 引用的作用域在从创建开始，一直持续到它最后一次使用的地方
-    // 变量的作用域从创建持续到某一个花括号 }
+    let s =  new_str();
+    println!("{}",s);
+    cat();
+    // 所有权demo1，可变引用
+    my_ownership::ownership_borrowing::demo1();
+    // 测试挂载其他crate
+    mount_bc::test2()
 }
