@@ -7,6 +7,8 @@ mod my_mount_bc;
 mod my_mount;
 // use crate::my_mount_bc::mount_bc;
 mod my_match;
+mod my_struct_impl;
+use  crate::my_struct_impl::my_impl;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
@@ -19,6 +21,11 @@ fn main() {
     // my_str::str_slice::run()
     //  模式匹配
     // my_match::at_match::run();
-    my_match::match_guard::guard1()
+    // my_match::match_guard::guard1()
+    
+    // 方法Method
+   let rect1 = my_impl::Rectangle::new(30,50);
+   println!("w:{},h:{}", rect1.width(),rect1.height());
+   
     
 }
