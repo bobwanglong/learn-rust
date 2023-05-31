@@ -6,7 +6,7 @@ mod my_ownership;
 mod my_mount_bc;
 mod my_mount;
 // use crate::my_mount_bc::mount_bc;
-
+mod my_match;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
@@ -16,7 +16,9 @@ fn main() {
     // 测试挂载其他crate
     // mount_bc::test2();
     //  字符串操作
-    my_str::str_slice::run()
-    //  
+    // my_str::str_slice::run()
+    //  模式匹配
+    // my_match::at_match::run();
+    my_match::match_guard::guard1()
     
 }
