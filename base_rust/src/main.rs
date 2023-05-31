@@ -1,14 +1,16 @@
-mod my_str; 
-mod my_cat;// 挂载在根crate
+mod my_cat; // 挂载在根crate
 mod my_ownership;
+mod my_str;
 // use my_cat::cat::*; // 使用crate的相对路径
 // use crate::my_str::my_str::new_str; // 使用crate的绝对路径
-mod my_mount_bc;
 mod my_mount;
+mod my_mount_bc;
 // use crate::my_mount_bc::mount_bc;
 mod my_match;
 mod my_struct_impl;
-use  crate::my_struct_impl::my_impl;
+// use  crate::my_struct_impl::my_impl;
+mod my_vec;
+mod my_hashMap;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
@@ -22,10 +24,10 @@ fn main() {
     //  模式匹配
     // my_match::at_match::run();
     // my_match::match_guard::guard1()
-    
+
     // 方法Method
-   let rect1 = my_impl::Rectangle::new(30,50);
-   println!("w:{},h:{}", rect1.width(),rect1.height());
-   
-    
+    //    let rect1 = my_impl::Rectangle::new(30,50);
+    //    println!("w:{},h:{}", rect1.width(),rect1.height());
+    // my_vec::my_vec::demo()
+    my_hashMap::myHashMap::run();
 }
