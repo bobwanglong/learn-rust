@@ -10,7 +10,8 @@ mod my_match;
 mod my_struct_impl;
 // use  crate::my_struct_impl::my_impl;
 mod my_vec;
-mod my_hashMap;
+mod my_hash_map;
+mod my_err;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
@@ -29,5 +30,9 @@ fn main() {
     //    let rect1 = my_impl::Rectangle::new(30,50);
     //    println!("w:{},h:{}", rect1.width(),rect1.height());
     // my_vec::my_vec::demo()
-    my_hashMap::myHashMap::run();
+    // my_hashMap::myHashMap::run();
+    // 错误处理
+    my_err::my_err::err_run();
+    println!("正常结束");
+
 }
