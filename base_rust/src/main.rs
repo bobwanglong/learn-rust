@@ -1,4 +1,4 @@
-use std::{string::ParseError, num::ParseIntError, error::Error};
+use std::{error::Error, num::ParseIntError, string::ParseError};
 
 mod my_cat; // 挂载在根crate
 mod my_ownership;
@@ -11,10 +11,10 @@ mod my_mount_bc;
 mod my_match;
 mod my_struct_impl;
 // use  crate::my_struct_impl::my_impl;
-mod my_vec;
-mod my_hash_map;
 mod my_err;
 mod my_alg;
+mod my_hash_map;
+mod my_vec;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
@@ -36,6 +36,4 @@ fn main() {
     // my_hashMap::myHashMap::run();
     // 错误处理
     my_err::my_err::err_run();
-   
-
 }
