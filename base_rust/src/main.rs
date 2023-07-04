@@ -14,6 +14,7 @@ mod my_struct_impl;
 mod my_vec;
 mod my_hash_map;
 mod my_err;
+mod my_alg;
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
