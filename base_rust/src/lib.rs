@@ -9,6 +9,7 @@ pub mod my_mount_bc;
 pub mod my_match;
 pub mod my_struct_impl;
 // use  crate::my_struct_impl::my_impl;
+pub mod my_alg;
 pub mod my_err;
 pub mod my_hash_map;
 pub mod my_vec;

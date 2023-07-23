@@ -15,6 +15,7 @@
 // mod my_hash_map;
 // mod my_vec;
 use base_rust::my_err;
+
 fn main() {
     // let s =  new_str();
     // println!("{}",s);
