@@ -8,6 +8,7 @@ impl Rectangle {
     pub fn new(width: u32, height: u32) -> Self {
         Rectangle { width, height }
     }
+    ///方法名与struct字段名同名，往往用来实现getter访问器
     pub fn width(&self) -> u32 {
         return self.width;
     }
