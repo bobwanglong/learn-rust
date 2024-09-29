@@ -1,9 +1,9 @@
 use std::collections::HashMap;
 pub fn run() {
-    createHashMap1();
-    createHashMapCollect();
+    create_hash_map1();
+    create_hash_map_collect();
 }
-fn createHashMap1() {
+fn create_hash_map1() {
     let mut my_gems = HashMap::new();
     my_gems.insert("红宝石", 1);
     my_gems.insert("绿宝石", 2);
@@ -12,7 +12,7 @@ fn createHashMap1() {
         println!("{},{}", key, val);
     }
 }
-fn createHashMapCollect() {
+fn create_hash_map_collect() {
     let teams_list = vec![
         ("中国队".to_string(), 100),
         ("美国队".to_string(), 10),
